@@ -3,9 +3,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import { toast } from "react-toastify";
-import remarkGfm from "remark-gfm";
 interface PortDetail {
   port: number;
   protocol: string;
@@ -204,13 +202,28 @@ export default function Home() {
     );
   };
 
-  function renderAnalysisRow(key, value, index) {
+  // Helper function to format the keys from camelCase to Title Case
+  function formatKey(key: string): string {
+    return key
+      .replace(/([A-Z])/g, " $1")
+      .replace(/^./, (str) => str.toUpperCase())
+      .replace(/[_]/g, " ");
+  }
+
+  // Function type for rendering analysis rows
+  type RenderAnalysisRow = (
+    key: string,
+    value: string,
+    index: number,
+  ) => JSX.Element;
+
+  // Helper function to render each row of the analysis
+  const renderAnalysisRow: RenderAnalysisRow = (key, value, index) => {
     return (
       <div
         key={key}
-        className={`${
-          index % 2 === 0 ? "bg-gray-50" : "bg-white"
-        } px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6`}
+        className={`${index % 2 === 0 ? "bg-gray-50" : "bg-white"}
+          px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6`}
       >
         <dt className="text-sm font-medium text-gray-500">{formatKey(key)}</dt>
         <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
@@ -218,14 +231,7 @@ export default function Home() {
         </dd>
       </div>
     );
-  }
-
-  function formatKey(key) {
-    return key
-      .replace(/([A-Z])/g, " $1")
-      .replace(/^./, (str) => str.toUpperCase())
-      .replace(/([_])/g, " ");
-  }
+  };
 
   const ResultArea = () => {
     return (
