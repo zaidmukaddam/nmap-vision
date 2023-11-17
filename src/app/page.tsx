@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { Github } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
@@ -398,8 +399,23 @@ export default function Home() {
     );
   };
 
+  const GitHubButton = () => (
+    <a
+      href="https://github.com/zaidmukaddam/nmap-vision"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center rounded-full border border-transparent bg-black px-5 py-2 text-sm font-medium leading-5 text-white hover:bg-gray-700 focus:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+    >
+      <Github className="mr-2 h-5 w-5" />
+      View on GitHub
+    </a>
+  );
+
   return (
     <div className="flex min-h-screen flex-col justify-center p-4">
+      <div className="text-right">
+        <GitHubButton />
+      </div>
       <div className={`mx-auto ${scanStarted ? "max-w-5xl" : "max-w-xl"}`}>
         <header className="mb-4 text-center">
           <h2 className="sr-only text-2xl font-bold text-green-500">
