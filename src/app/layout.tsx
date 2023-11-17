@@ -46,6 +46,7 @@ export default function RootLayout({
         className={`bg-zinc-900 ${GeistMono.className} ${GeistSans.className}`}
       >
         <ToastProvider>{children}</ToastProvider>
+        <script async src="https://cdn.splitbee.io/sb.js" />
       </body>
     </html>
   );
