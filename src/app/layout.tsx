@@ -9,7 +9,7 @@ const baseOpenGraphMetadata = {
   title: "NmapVision",
   description: "GPT-4 Vision Powered Nmap Scan Analysis",
   type: "website",
-  url: "https://nmapvision.com/",
+  url: "https://nmap-vision.za16.co/",
   siteName: "NmapVision",
   locale: "en_US",
 };
@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   title: "NmapVision",
   description: "GPT-4 Vision Powered Nmap Scan Analysis",
   robots: "index, follow",
-  metadataBase: new URL("https://nmapvision.com/"),
+  metadataBase: new URL("https://nmap-vision.za16.co/"),
   openGraph: baseOpenGraphMetadata,
   twitter: baseTwitterMetadata,
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://nmap-vision.za16.co/favicon.ico",
   },
 };
 

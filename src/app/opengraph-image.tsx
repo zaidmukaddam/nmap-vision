@@ -26,7 +26,7 @@ export default async function OG() {
         }}
       >
         <img
-          src={`http://localhost:3000/logo.png`}
+          src={`https://nmap-vision.za16.co/logo.png`}
           alt="Logo"
           tw="w-100 h-100 mb-4 opacity-95"
         />

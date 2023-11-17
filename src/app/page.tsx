@@ -177,7 +177,7 @@ export default function Home() {
               htmlFor="file"
               className="cursor-pointer text-sm text-green-400 hover:text-green-600"
             >
-              <span className="mt-2 text-center text-base leading-normal">
+              <span className="mt-2 text-center text-sm leading-normal">
                 Click to upload or drag and drop
               </span>
               <p className="text-center text-xs">PNG, JPG, GIF up to 10MB</p>
@@ -430,7 +430,7 @@ export default function Home() {
             JSON Mode.
           </p>
           <footer className="text-center text-green-200">
-            Built with ❤️ by{" "}
+            Copyright © 2023{" "}
             <Link href={`https://za16.fyi`}>Zaid Mukaddam</Link>
           </footer>
         </div>
