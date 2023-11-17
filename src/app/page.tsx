@@ -160,7 +160,7 @@ export default function Home() {
       <>
         {!imageSrc ? (
           <div
-            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-24 ${dragOverClass}`}
+            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-12 md:p-24 ${dragOverClass}`}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
