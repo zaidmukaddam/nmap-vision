@@ -129,7 +129,7 @@ export default function Home() {
           if (response.ok) {
             const scanResult: ScanResult = await response.json();
             setResult(scanResult);
-            resolve();
+            resolve(scanResult);
           } else {
             reject(new Error("Failed to process the scan"));
           }
