@@ -14,7 +14,7 @@ const baseOpenGraphMetadata = {
   locale: "en_US",
 };
 
-export const TWITTER_HANDLE = "@zaidmukaddam";
+const TWITTER_HANDLE = "@zaidmukaddam";
 const baseTwitterMetadata = {
   card: "summary_large_image",
   title: "NmapVision",
