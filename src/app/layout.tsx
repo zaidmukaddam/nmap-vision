@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ToastProvider from "./components/toast.provider";
 import "./globals.css";
 
-export const baseOpenGraphMetadata = {
+const baseOpenGraphMetadata = {
   title: "NmapVision",
   description: "GPT-4 Vision Powered Nmap Scan Analysis",
   type: "website",
@@ -15,7 +15,7 @@ export const baseOpenGraphMetadata = {
 };
 
 export const TWITTER_HANDLE = "@zaidmukaddam";
-export const baseTwitterMetadata = {
+const baseTwitterMetadata = {
   card: "summary_large_image",
   title: "NmapVision",
   description: "GPT-4 Vision Powered Nmap Scan Analysis",
