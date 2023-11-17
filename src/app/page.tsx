@@ -160,7 +160,7 @@ export default function Home() {
       <>
         {!imageSrc ? (
           <div
-            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-12 md:p-24 ${dragOverClass}`}
+            className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-9 md:p-24 ${dragOverClass}`}
             onDragOver={handleDragOver}
             onDragLeave={handleDragLeave}
             onDrop={handleDrop}
@@ -412,7 +412,7 @@ export default function Home() {
   );
 
   return (
-    <div className="flex min-h-screen flex-col justify-center p-4">
+    <div className="md:p-auto flex min-h-full flex-col justify-center p-4 md:min-h-screen">
       <div className="text-right">
         <GitHubButton />
       </div>
@@ -428,9 +428,9 @@ export default function Home() {
           />
         </header>
 
-        <div className="rounded-lg p-8">
+        <div className="rounded-lg p-4">
           <h1 className="mb-4 text-center text-xl font-bold tracking-tight text-green-400">
-            Let AI analyze your nmap scans! 👁️
+            Let AI analyze your nmap scans!
           </h1>
           <p className="text-bold mb-4 text-center text-green-200">
             NmapVision is a tool to analyze your nmap scans and give you a
@@ -441,7 +441,7 @@ export default function Home() {
             {!scanStarted && UploadArea()}
             {scanStarted && ResultArea()}
           </div>
-          <p className="text-bold 2 px-8 text-center text-green-200">
+          <p className="text-bold p-4 text-center text-green-200 md:px-8">
             Powered by OpenAI&apos;s API's for GPT-4-Vision and GPT-4-Turbo's
             JSON Mode.
           </p>
